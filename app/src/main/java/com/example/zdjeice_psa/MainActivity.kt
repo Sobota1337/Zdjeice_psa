@@ -43,13 +43,23 @@ class MainActivity : AppCompatActivity() {
                 findViewById<ImageView>(R.id.imageView).setImageResource(R.drawable.auto);
         }
             findViewById<Button>(R.id.rotacja_p).setOnClickListener {
-                var rotacja = findViewById<EditText>(R.id.rotacja).text
+                var rotacja = findViewById<EditText>(R.id.rotacja).text;
                 findViewById<ImageView>(R.id.imageView).rotation = rotacja.toString().toFloat();
 
                 findViewById<Button>(R.id.rotacja_l).setOnClickListener {
                     var rotacja = "-" + findViewById<EditText>(R.id.rotacja).text;
                     findViewById<ImageView>(R.id.imageView).rotation = rotacja.toString().toFloat();
 
+                findViewById<Button>(R.id.skalabtn).setOnClickListener {
+                    var skala = findViewById<EditText>(R.id.skala).text;
+                    findViewById<ImageView>(R.id.imageView).scaleX = skala.toString().toFloat();
+                    findViewById<ImageView>(R.id.imageView).scaleY = skala.toString().toFloat();
+
+                findViewById<Button>(R.id.przezbtn).setOnClickListener {
+                        var przez = findViewById<EditText>(R.id.przez).text;
+                    findViewById<ImageView>(R.id.imageView).alpha = przez.toString().toFloat();
+                    }
+                }
 
                 }
             }
